@@ -11,4 +11,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Core SerialBus REQUIRED)
 
+add_subdirectory(candle_api/src)
+
 add_subdirectory(src)

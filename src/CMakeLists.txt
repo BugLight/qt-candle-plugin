@@ -6,6 +6,14 @@ add_library(qt-candle-plugin SHARED
   qt-candle-plugin.json
 )
 
-target_link_libraries(qt-candle-plugin PRIVATE Qt5::Core Qt5::SerialBus)
+target_include_directories(qt-candle-plugin PRIVATE
+  "${PROJECT_SOURCE_DIR}/candle_api/src"
+)
+
+target_link_libraries(qt-candle-plugin PRIVATE
+  Qt5::Core
+  Qt5::SerialBus
+  candle_api
+)
 
 target_compile_definitions(qt-candle-plugin PRIVATE QTCANDLEPLUGIN_LIBRARY)
