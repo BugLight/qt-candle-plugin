@@ -4,6 +4,8 @@ add_library(qt-candle-plugin SHARED
   candlecanbusplugin.cpp
   candlecanbusplugin.h
   qt-candle-plugin.json
+  candledevice.h
+  candledevice.cpp
 )
 
 target_include_directories(qt-candle-plugin PRIVATE

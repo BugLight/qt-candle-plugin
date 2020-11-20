@@ -7,6 +7,7 @@ class CandleCanBusPlugin : public QObject, public QCanBusFactoryV2 {
   Q_OBJECT
   Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QCanBusFactory" FILE
                         "qt-candle-plugin.json")
+  Q_INTERFACES(QCanBusFactoryV2)
 
  public:
   QList<QCanBusDeviceInfo> availableDevices(
