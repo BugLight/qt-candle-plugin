@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.5)
-
 add_library(qt-candle-plugin SHARED
   candlecanbusplugin.cpp
   candlecanbusplugin.h
