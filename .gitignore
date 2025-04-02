@@ -73,3 +73,6 @@ out
 *.dll
 *.exe
 
+build/*
+.directory
+CMakeLists.txt.user*

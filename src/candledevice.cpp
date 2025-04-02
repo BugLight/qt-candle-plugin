@@ -85,8 +85,14 @@ QList<QCanBusDeviceInfo> CandleDevice::interfaces() {
     uint8_t length;
     if (candle_list_length(list, &length)) {
       for (auto i = 0; i < length; ++i) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 2, 0)
+        // https://github.com/qt/qtserialbus/commit/3b2ce7c739ca2bb5b47d26fc1b0ee4294f49f0a4
+        auto info = createDeviceInfo(QStringLiteral("candle"), "can" + QString::number(i), QString(),
+                                     "Candle CAN device", QString(), 0, false, true);
+#else
         auto info = createDeviceInfo("can" + QString::number(i), "",
                                      "Candle CAN device", 0, false, true);
+#endif
         devices.append(info);
       }
     }
