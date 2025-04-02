@@ -11,8 +11,8 @@ target_include_directories(qt-candle-plugin PRIVATE
 )
 
 target_link_libraries(qt-candle-plugin PRIVATE
-  Qt5::Core
-  Qt5::SerialBus
+  Qt${QT_VERSION_MAJOR}::Core
+  Qt${QT_VERSION_MAJOR}::SerialBus
   candle_api
 )
 

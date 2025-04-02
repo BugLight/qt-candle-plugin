@@ -5,7 +5,7 @@ Candle CAN bus plugin for Qt
 
 ## Prerequisites
 
-- Qt5 (can be downloaded from [official Qt website](https://www.qt.io/download-qt-installer))
+- Qt5 or Qt6 (can be downloaded from [official Qt website](https://www.qt.io/download-qt-installer))
 - CMake >= 3.10
 - Ninja (optional)
 
